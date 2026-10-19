@@ -1,0 +1,6 @@
+{
+  "name": "Naija Pot Kitchen & Grill Ltd",
+  "description": "Authentic Nigerian restaurant website with interactive menu, WhatsApp ordering, and brand assets for NAIJA POT KITCHEN & GRILL LTD.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

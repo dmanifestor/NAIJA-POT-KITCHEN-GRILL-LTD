@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAIJA POT KITCHEN & GRILL LTD | Authentic Nigerian Flavours & Grill</title>
+    <link rel="icon" type="image/png" href="/src/assets/images/naija_pot_logo.png" />
+    <meta name="description" content="Discover authentic Nigerian cuisine at NAIJA POT KITCHEN & GRILL LTD. Steaming party Jollof rice, aromatic soups, swallow, and smoky charcoal grills. Order on WhatsApp." />
+    <meta property="og:title" content="NAIJA POT KITCHEN & GRILL LTD | Authentic Nigerian Flavours & Grill" />
+    <meta property="og:description" content="Discover authentic Nigerian cuisine at NAIJA POT KITCHEN & GRILL LTD. Steaming party Jollof rice, aromatic soups, swallow, and smoky charcoal grills. Order on WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NAIJA POT KITCHEN & GRILL LTD" />
+    <meta property="og:image" content="/src/assets/images/naija_pot_logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NAIJA POT KITCHEN & GRILL LTD | Authentic Nigerian Flavours & Grill" />
+    <meta name="twitter:description" content="Authentic Nigerian flavours fresh from our kitchen. Experience rich Jollof, Suya, Swallow & Soups with seamless WhatsApp ordering." />
+    <meta name="twitter:image" content="/src/assets/images/naija_pot_logo.png" />
+    
+    <!-- Google Fonts: Playfair Display for luxury serif headings, Plus Jakarta Sans for clean modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Restaurant Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "NAIJA POT KITCHEN & GRILL LTD",
+      "image": "/src/assets/images/hero_nigerian_feast_1792326947659.jpg",
+      "servesCuisine": "Nigerian, West African, Grill",
+      "description": "Authentic Nigerian cuisine, traditional flavours, and modern hospitality. Specializing in Party Jollof, Egusi, Pounded Yam, and smoky Suya grills.",
+      "priceRange": "££",
+      "acceptsReservations": "true",
+      "hasMenu": "#menu",
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "#menu",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "deliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-[#141211] text-[#FFF7E8] font-sans antialiased selection:bg-[#C6A15B] selection:text-[#141211]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
