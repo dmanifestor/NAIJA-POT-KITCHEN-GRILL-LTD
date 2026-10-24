@@ -87,3 +87,12 @@ npm run dev
 npm run build
 ```
 The compiled output is located in `dist/`.
+
+### GitHub Pages Deployment:
+The application is pre-configured for GitHub Pages:
+- **Base Path**: Configured as `base: './'` in `vite.config.ts` so all scripts, styles, and images resolve seamlessly whether hosted at root or on a GitHub repository subpath (e.g. `https://<username>.github.io/<repo>/`).
+- **Asset Bundling**: All dish and brand images are imported and bundled into `dist/assets/`, with duplicate fallbacks in `public/`.
+- **SPA Routing**: `public/404.html` redirects any direct deep link requests cleanly.
+- **Jekyll Bypass**: `public/.nojekyll` prevents GitHub Pages from ignoring bundled assets.
+- **Automated Workflow**: `.github/workflows/deploy.yml` runs automated linting and building on push/PR to `main`.
+

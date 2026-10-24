@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BrandLogo } from './BrandLogo';
+import { heroFeast } from '../assets/images';
 import { MessageCircle, Utensils, Flame, Sparkles, Clock, CheckCircle2 } from 'lucide-react';
 
 interface HeroProps {
@@ -114,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onOpenOrderTray }) =>
               <div className="relative rounded-2xl overflow-hidden border border-[#C6A15B]/30 shadow-2xl bg-[#1C1917] group">
                 {/* Culinary Hero Image */}
                 <img
-                  src="/src/assets/images/hero_nigerian_feast_1792326947659.jpg"
+                  src={heroFeast}
                   alt="Authentic Nigerian feast at NAIJA POT KITCHEN & GRILL LTD with party jollof rice, grilled beef suya, plantains, and egusi soup"
                   className="w-full h-[260px] xs:h-[320px] sm:h-[420px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"

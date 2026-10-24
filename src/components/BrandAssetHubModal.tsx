@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrandLogo } from './BrandLogo';
+import { logoImage } from '../assets/images';
 import { X, Download, Copy, Check, Palette, Sparkles, Layers, Image as ImageIcon } from 'lucide-react';
 
 interface BrandAssetHubModalProps {
@@ -120,7 +121,7 @@ export const BrandAssetHubModal: React.FC<BrandAssetHubModalProps> = ({ isOpen, 
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-[2px] bg-gradient-to-tr from-[#9E7B35] via-[#E5C578] to-[#C6A15B] shadow-md shrink-0 overflow-hidden">
                 <img
-                  src="/src/assets/images/naija_pot_logo.png"
+                  src={logoImage}
                   alt="Official NAIJA POT Logo"
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -141,7 +142,7 @@ export const BrandAssetHubModal: React.FC<BrandAssetHubModalProps> = ({ isOpen, 
 
             <div className="flex items-center gap-2.5 shrink-0 w-full md:w-auto">
               <a
-                href="/src/assets/images/naija_pot_logo.png"
+                href={logoImage}
                 download="naija-pot-logo-official.png"
                 className="flex-1 md:flex-initial py-2.5 px-4 text-xs font-bold text-[#141211] bg-[#C6A15B] hover:bg-[#E5C578] rounded-md shadow flex items-center justify-center gap-1.5 transition-colors"
               >

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { restaurantInterior } from '../assets/images';
 import { Sparkles, Utensils, HeartHandshake, Flame, ShieldAlert } from 'lucide-react';
 
 interface AboutSectionProps {
@@ -25,7 +26,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           >
             <div className="relative rounded-2xl overflow-hidden border border-[#C6A15B]/30 shadow-2xl bg-[#1C1917]">
               <img
-                src="/src/assets/images/restaurant_interior_1792326950409.jpg"
+                src={restaurantInterior}
                 alt="Modern, welcoming dining ambiance at NAIJA POT KITCHEN & GRILL LTD"
                 className="w-full h-[260px] xs:h-[320px] sm:h-[400px] lg:h-[450px] object-cover"
                 loading="lazy"

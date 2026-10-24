@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { restaurantInterior } from '../assets/images';
 import { RestaurantConfig } from '../types/restaurant';
 import { Calendar, Clock, Users, MessageCircle, CheckCircle2, Sparkles, MapPin, Phone, ShieldCheck } from 'lucide-react';
 
@@ -88,7 +89,7 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({ config }
           <div className="lg:col-span-5 space-y-6">
             <div className="relative rounded-2xl overflow-hidden border border-[#C6A15B]/30 shadow-xl bg-[#1C1917]">
               <img
-                src="/src/assets/images/restaurant_interior_1792326950409.jpg"
+                src={restaurantInterior}
                 alt="NAIJA POT Dining Ambiance"
                 className="w-full h-64 sm:h-72 object-cover"
                 loading="lazy"
