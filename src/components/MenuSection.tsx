@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { MenuItem, MenuCategoryType } from '../types/restaurant';
 import { MENU_CATEGORIES } from '../data/restaurantConfig';
+import { LazyImage } from './LazyImage';
 import { MessageCircle, Search, Flame, Info, Check, Plus, AlertCircle } from 'lucide-react';
 
 interface MenuSectionProps {
@@ -240,14 +241,15 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                 whileHover={{ y: -4, transition: { duration: 0.18 } }}
                 className="bg-[#141211] rounded-xl overflow-hidden border border-[#292522] hover:border-[#C6A15B]/40 transition-colors duration-200 flex flex-col group shadow-md transform-gpu will-change-[transform,opacity]"
               >
-                {/* Food Image Container */}
+                {/* Food Image Container with IntersectionObserver Lazy Loading */}
                 <div className="relative h-48 sm:h-52 lg:h-56 overflow-hidden bg-[#292522]">
-                  <img
+                  <LazyImage
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
+                    containerClassName="w-full h-full"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    rootMargin="250px 0px"
+                    fallbackIcon="utensils"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#141211] via-transparent to-transparent opacity-80 pointer-events-none" />
 

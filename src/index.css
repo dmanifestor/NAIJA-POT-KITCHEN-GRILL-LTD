@@ -79,3 +79,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #6D1F2B;
 }
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

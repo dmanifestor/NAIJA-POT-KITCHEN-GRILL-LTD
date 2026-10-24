@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { GalleryItem } from '../types/restaurant';
 import { GALLERY_ITEMS } from '../data/restaurantConfig';
+import { LazyImage } from './LazyImage';
 import { Eye, X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
 
 const filterContainerVariants: Variants = {
@@ -139,12 +140,13 @@ export const GallerySection: React.FC = () => {
               onClick={() => setActiveLightboxIndex(index)}
               className="relative group rounded-xl overflow-hidden bg-[#181615] border border-[#292522] hover:border-[#C6A15B]/40 cursor-pointer shadow-md aspect-[4/3] transition-colors transform-gpu will-change-[opacity,transform]"
             >
-              <img
+              <LazyImage
                 src={item.image}
                 alt={item.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                referrerPolicy="no-referrer"
+                containerClassName="w-full h-full"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                rootMargin="250px 0px"
+                fallbackIcon="image"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#141211]/90 via-[#141211]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-end p-4 sm:p-5">
                 <div className="flex items-center justify-between text-[#E5C578]">
